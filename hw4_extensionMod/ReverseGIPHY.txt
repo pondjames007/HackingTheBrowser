@@ -1,0 +1,21 @@
+
+Required Permission: use 2 APIs
+    tabs
+    contextMenus
+
+It has a browser action with a popup page "giphy.html"
+
+no background scripts
+content scripts: jquery, hipchat.js
+
+This extension can let you search GIFs by clicking on the icon, 
+and there will be a popup page to show the GIFS. It is basically put a full webpage in this extension.
+
+Other things in manifest.json:
+
+    web_accessible_resources:
+        an array of strings specifying the paths of resources that are usable in the context of a page
+        the path is related to the package root
+
+    content_security_policy:
+        to prevent cross-site scripting issues, add some rules to make the extension more secure
